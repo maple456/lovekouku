@@ -140,7 +140,7 @@ class LINE extends Command {
         this.command(`.set`,this.setReader.bind(this));
         this.command(`.recheck`,this.rechecks.bind(this));
         this.command(`.clearall`,this.clearall.bind(this));
-        this.command('myid',`Your ID: ${messages.from}`)
+        this.command('.myid',`Your ID: ${messages.from}`)
         this.command(`.ip ${payload}`,this.checkIP.bind(this))
         this.command(`.ig ${payload}`,this.checkIG.bind(this))
         this.command(`.qr ${payload}`,this.qrOpenClose.bind(this))
