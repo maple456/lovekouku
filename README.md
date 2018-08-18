@@ -8,8 +8,8 @@ check your nodejs version
 
 How to run ?
 ------
-- `git clone https://github.com/lovekouku/LineAlphatJS.git`
-- `cd LineAlphatJS && npm install`
+- `git clone https://github.com/maple/lovekouku`
+- `cd lovekouku && npm install`
 - `npm start`
 
 
