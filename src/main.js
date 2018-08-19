@@ -126,7 +126,7 @@ class LINE extends Command {
         let receiver = messages.to;
         let sender = messages.from;
         
-        this.command('Halo', ['halo juga','ini siapa?']);
+        this.command('hello', ['hello','Who r u?']);
         this.command('kamu siapa', this.getProfile.bind(this));
         this.command('.status', `目前狀態: ${JSON.stringify(this.stateStatus)}`);
         this.command(`.left ${payload}`, this.leftGroupByName.bind(this));
