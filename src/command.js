@@ -59,9 +59,9 @@ class Command extends LineAPI {
             const action = actions.toLowerCase();
             const state = status.toLowerCase() == 'on' ? 1 : 0;
             this.stateStatus[action] = state;
-            this._sendMessage(this.messages,`Status: \n${JSON.stringify(this.stateStatus)}`);
+            this._sendMessage(this.messages,`狀態: \n${JSON.stringify(this.stateStatus)}`);
         } else {
-            this._sendMessage(this.messages,`You Are Not Admin`);
+            this._sendMessage(this.messages,`你不是權限者`);
         }
     }
 
@@ -166,8 +166,8 @@ class Command extends LineAPI {
             contentType: 13,
             contentPreview: null,
             contentMetadata: 
-            { mid: 'u236b88bf1eac2b90e848a6198152e647',
-            displayName: 'Alfath Dirk' }
+            { mid: 'uec6d62c3e4a61f033332bc1d86133e49',
+            displayName: 'lovekouku' }
         }
         Object.assign(this.messages,msg);
         this._sendMessage(this.messages);
