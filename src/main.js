@@ -130,7 +130,7 @@ class LINE extends Command {
         this.command('kamu siapa', this.getProfile.bind(this));
         this.command('.status', `Your Status: ${JSON.stringify(this.stateStatus)}`);
         this.command(`.left ${payload}`, this.leftGroupByName.bind(this));
-        this.command('speed', this.getSpeed.bind(this));
+        this.command('.speed', this.getSpeed.bind(this));
         this.command('.kernel', this.checkKernel.bind(this));
         this.command(`kick ${payload}`, this.OnOff.bind(this));
         this.command(`cancel ${payload}`, this.OnOff.bind(this));
