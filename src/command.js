@@ -155,12 +155,13 @@ class Command extends LineAPI {
     }
 
     clearall() {
-        this._sendMessage(this.messages, `Reseted !`);
+        this._sendMessage(this.messages, `重新安裝！`);
         this.checkReader = [];
         return
     }
 
     creator() {
+        this._sendMessage(this.messages, `我的作者`);
         let msg = {
             text:null,
             contentType: 13,
@@ -189,7 +190,7 @@ class Command extends LineAPI {
             group: this.messages.to,
             sender: this.messages._from
         };
-        this._sendMessage(this.messages,`select pict/video for upload ${this.stateUpload.name}`);
+        this._sendMessage(this.messages,`選擇圖片/影片進行上傳 ${this.stateUpload.name}`);
         return;
     }
     
