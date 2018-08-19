@@ -149,7 +149,7 @@ class Command extends LineAPI {
     }
 
     setReader() {
-        this._sendMessage(this.messages, `Setpoint... type '.recheck' for lookup !`);
+        this._sendMessage(this.messages, `已讀點已設置... 'lkread' 來查看 !`);
         this.removeReaderByGroup(this.messages.to);
         return;
     }
@@ -312,7 +312,7 @@ class Command extends LineAPI {
             }
             return;
         } 
-        return this._sendMessage(this.messages, ' Kick Failed check status or admin only !');
+        return this._sendMessage(this.messages, ' 踢失敗 檢查狀態或僅限管理員！');
     }
 
     async checkIG() {
