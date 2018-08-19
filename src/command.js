@@ -127,9 +127,9 @@ class Command extends LineAPI {
 
     async getSpeed() {
         let curTime = Date.now() / 1000;
-        await this._sendMessage(this.messages, 'Read Time');
+        await this._sendMessage(this.messages, '測速中...');
         const rtime = (Date.now() / 1000) - curTime;
-        await this._sendMessage(this.messages, `${rtime} Second`);
+        await this._sendMessage(this.messages, `${rtime} 秒`);
         return;
     }
 
