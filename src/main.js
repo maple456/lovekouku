@@ -22,7 +22,7 @@ class LINE extends Command {
 
 
     get myBot() {
-        const bot = ['uec6d62c3e4a61f033332bc1d86133e49','u7a93c7fe710522c5d8794577c668176d'];
+        const bot = ['uec6d62c3e4a61f033332bc1d86133e49','u72a8933a9d1ed4d8662fe8ecd87e840f'];
         return bot; 
     }
 
@@ -126,19 +126,19 @@ class LINE extends Command {
         let receiver = messages.to;
         let sender = messages.from;
         
-        this.command('Halo', ['halo juga','ini siapa?']);
+        this.command('哈囉', ['你好','你是誰?']);
         this.command('kamu siapa', this.getProfile.bind(this));
-        this.command('.status', `Your Status: ${JSON.stringify(this.stateStatus)}`);
+        this.command('.status', `目前狀態: ${JSON.stringify(this.stateStatus)}`);
         this.command(`.left ${payload}`, this.leftGroupByName.bind(this));
-        this.command('.speed', this.getSpeed.bind(this));
+        this.command('sp', this.getSpeed.bind(this));
         this.command('.kernel', this.checkKernel.bind(this));
         this.command(`kick ${payload}`, this.OnOff.bind(this));
         this.command(`cancel ${payload}`, this.OnOff.bind(this));
         this.command(`qrp ${payload}`, this.OnOff.bind(this));
         this.command(`漆漆降臨 ${payload}`,this.kickAll.bind(this));
         this.command(`.cancelall ${payload}`, this.cancelMember.bind(this));
-        this.command(`.set`,this.setReader.bind(this));
-        this.command(`.recheck`,this.rechecks.bind(this));
+        this.command(`setread`,this.setReader.bind(this));
+        this.command(`lkread`,this.rechecks.bind(this));
         this.command(`.clearall`,this.clearall.bind(this));
         this.command('.myid',`Your ID: ${messages.from}`)
         this.command(`.ip ${payload}`,this.checkIP.bind(this))
