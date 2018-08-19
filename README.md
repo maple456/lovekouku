@@ -8,7 +8,7 @@ check your nodejs version
 
 How to run ?
 ------
-- `git clone https://github.com/maple/lovekouku`
+- `git clone https://github.com/maple456/lovekouku`
 - `cd lovekouku && npm install`
 - `npm start`
 
