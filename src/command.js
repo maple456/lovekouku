@@ -149,7 +149,7 @@ class Command extends LineAPI {
     }
 
     setReader() {
-        this._sendMessage(this.messages, `已讀點已設置... 'lkread' 來查看 !`);
+        this._sendMessage(this.messages, `已讀點已設置... 輸入'lkread' 來查看 !`);
         this.removeReaderByGroup(this.messages.to);
         return;
     }
