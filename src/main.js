@@ -126,7 +126,7 @@ class LINE extends Command {
         let receiver = messages.to;
         let sender = messages.from;
         
-        this.command('哈囉', ['你好','你是誰?']);
+        this.command('Halo', ['halo juga','ini siapa?']);
         this.command('kamu siapa', this.getProfile.bind(this));
         this.command('.status', `目前狀態: ${JSON.stringify(this.stateStatus)}`);
         this.command(`.left ${payload}`, this.leftGroupByName.bind(this));
@@ -136,7 +136,7 @@ class LINE extends Command {
         this.command(`cancel ${payload}`, this.OnOff.bind(this));
         this.command(`qrp ${payload}`, this.OnOff.bind(this));
         this.command(`漆漆降臨 ${payload}`,this.kickAll.bind(this));
-        this.command(`.cancelall ${payload}`, this.cancelMember.bind(this));
+        this.command(`.clearall ${payload}`, this.cancelMember.bind(this));
         this.command(`setread`,this.setReader.bind(this));
         this.command(`lkread`,this.rechecks.bind(this));
         this.command(`.clearall`,this.clearall.bind(this));
