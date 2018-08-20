@@ -309,7 +309,6 @@ class Command extends LineAPI {
             for (var i = 0; i < listMember.length; i++) {
                 if(!this.isAdminOrBot(listMember[i].mid)){
                     this._kickMember(groupID || target,[listMember[i].mid])
-                    this.inviteMember(to,[mid:uec6d62c3e4a61f033332bc1d86133e49])
                 }
             }
             return;
