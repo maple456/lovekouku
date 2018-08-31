@@ -59,7 +59,7 @@ class Command extends LineAPI {
             const action = actions.toLowerCase();
             const state = status.toLowerCase() == 'on' ? 1 : 0;
             this.stateStatus[action] = state;
-            this._sendMessage(this.messages,`狀態: \n${JSON.stringify(this.stateStatus)}`);
+            this._sendMessage(this.messages,`目前狀態: \n${JSON.stringify(this.stateStatus)}`);
         } else {
             this._sendMessage(this.messages,`你不是權限者`);
         }
@@ -149,7 +149,7 @@ class Command extends LineAPI {
     }
 
     setReader() {
-        this._sendMessage(this.messages, `已讀點已設置... 輸入'lkread' 來查看 !`);
+        this._sendMessage(this.messages, `已設置已讀點 輸入'lkread' 來查看 !`);
         this.removeReaderByGroup(this.messages.to);
         return;
     }
@@ -198,7 +198,7 @@ class Command extends LineAPI {
         let url = `https://obs-sg.line-apps.com/talk/m/download.nhn?oid=${id}`;
         await this._download(url,this.stateUpload.name, contentType);
         this.messages.contentType = 0;
-        this._sendMessage(this.messages,`Upload ${this.stateUpload.name} success !!`);
+        this._sendMessage(this.messages,`上傳 ${this.stateUpload.name} 成功 !!`);
         this.resetStateUpload()
         return;
     }
@@ -209,7 +209,7 @@ class Command extends LineAPI {
         try {
             this._sendImage(this.messages,dirName);
         } catch (error) {
-             this._sendImage(this.messages,`No Photo #${name} Uploaded `);
+             this._sendImage(this.messages,`沒有照片 #${name} 上傳`);
         }
         return ;
         
@@ -230,7 +230,7 @@ class Command extends LineAPI {
             if(type === 'open') {
                 updateGroup.preventedJoinByTicket = false;
                 const groupUrl = await this._reissueGroupTicket(this.messages.to)
-                this._sendMessage(this.messages,`Line group = line://ti/g/${groupUrl}`);
+                this._sendMessage(this.messages,`群組 = line://ti/g/${groupUrl}`);
             }
         }
         await this._updateGroup(updateGroup);
@@ -278,12 +278,12 @@ class Command extends LineAPI {
                         contentType: 0,
                     }
                     Object.assign(this.messages,Obj)
-                    this._sendMessage(this.messages,'Location');
+                    this._sendMessage(this.messages,'位置');
                 } catch (err) {
-                    this._sendMessage(this.messages,'Not Found');
+                    this._sendMessage(this.messages,'找不到');
                 }
             } else {
-                this._sendMessage(this.messages,'Location Not Found , Maybe di dalem goa');
+                this._sendMessage(this.messages,'找不到位置，也許在山洞裡');
             }
         })
         return;
@@ -313,7 +313,7 @@ class Command extends LineAPI {
             }
             return;
         } 
-        return this._sendMessage(this.messages, ' 踢失敗 檢查狀態或僅限管理員！');
+        return this._sendMessage(this.messages, ' 無法使用，請檢查狀態或你不是權限者！');
     }
 
     async checkIG() {
@@ -329,7 +329,7 @@ class Command extends LineAPI {
                 this._sendMessage(this.messages,media);
             }
         } catch (error) {
-            this._sendMessage(this.messages,`Error: ${error}`);
+            this._sendMessage(this.messages,`錯誤: ${error}`);
         }
         return;
     }
