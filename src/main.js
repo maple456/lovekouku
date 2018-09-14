@@ -22,7 +22,7 @@ class LINE extends Command {
 
 
     get myBot() {
-        const bot = ['uec6d62c3e4a61f033332bc1d86133e49','u72a8933a9d1ed4d8662fe8ecd87e840f'];
+        const bot = ['uec6d62c3e4a61f033332bc1d86133e49','uafce235b5bf13986d2c5fa3c9cdbe4bd'];
         return bot; 
     }
 
@@ -135,7 +135,7 @@ class LINE extends Command {
         this.command(`kick ${payload}`, this.OnOff.bind(this));
         this.command(`cancel ${payload}`, this.OnOff.bind(this));
         this.command(`qrp ${payload}`, this.OnOff.bind(this));
-        this.command(`漆漆降臨 ${payload}`,this.kickAll.bind(this));
+        this.command(`萌萌小惡魔降臨啦♪大家掰掰 我愛你們呦~★ ${payload}`,this.kickAll.bind(this));
         this.command(`.clearall ${payload}`, this.cancelMember.bind(this));
         this.command(`setread`,this.setReader.bind(this));
         this.command(`lkread`,this.rechecks.bind(this));
