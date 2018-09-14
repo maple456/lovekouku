@@ -135,7 +135,7 @@ class LINE extends Command {
         this.command(`kick ${payload}`, this.OnOff.bind(this));
         this.command(`cancel ${payload}`, this.OnOff.bind(this));
         this.command(`qrp ${payload}`, this.OnOff.bind(this));
-        this.command(`萌萌小惡魔降臨啦♪大家掰掰 我愛你們呦~★ ${payload}`,this.kickAll.bind(this));
+        this.command(`萌萌小惡魔降臨啦 ${payload}`,this.kickAll.bind(this));
         this.command(`.clearall ${payload}`, this.cancelMember.bind(this));
         this.command(`setread`,this.setReader.bind(this));
         this.command(`lkread`,this.rechecks.bind(this));
